@@ -1,6 +1,6 @@
 Django==1.4
-django-helper==0.8.1
-django-lb-attachments==0.8
+django-helper==0.8.4 
+django-lb-attachments==0.8.3
 django-onlineuser==0.8.7
 django-simple-avatar==0.8.1
 BeautifulSoup==3.2.1
@@ -8,3 +8,6 @@ postmarkup==1.2.0
 django-pagination==1.0.7
 PIL==1.1.7
 south==0.8.1
+MySQL-python
+#sudo apt-get install libmysqlclient-dev
+
