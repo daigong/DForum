@@ -9,5 +9,5 @@ django-pagination==1.0.7
 PIL==1.1.7
 south==0.8.1
 MySQL-python
-#sudo apt-get install libmysqlclient-dev
-
+django-simple-captcha==0.3.8
+django-registration==0.8

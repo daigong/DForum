@@ -1,4 +1,4 @@
-
+import os
 # Django settings for bbs project.
 
 DEBUG = True
@@ -15,7 +15,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'lbforum_bbs',                      # Or path to database file if using sqlite3.
         'USER': 'root',                      # Not used with sqlite3.
-        'PASSWORD': 'sunmap',                  # Not used with sqlite3.
+        'PASSWORD': 'daigong',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -123,17 +123,21 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.admin',
+    'django.contrib.admindocs',
+
     'pagination',
+    'registration',
     'south',
+    'captcha',
+
     'lbforum',
     'simpleavatar',
     'djangohelper',
     'onlineuser',
     'attachments',
-    # Uncomment the next line to enable the admin:
-    'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    'django.contrib.admindocs',
+
+    'lbregistration',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -232,3 +236,8 @@ acceptable_attributes = ['abbr', 'accept', 'accept-charset', 'accesskey',
     'span', 'src', 'start', 'summary', 'tabindex', 'target', 'title', 'type',
     'usemap', 'valign', 'value', 'vspace', 'width', 'style']
 """
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+TEMPLATE_DIRS = (
+        os.path.join(HERE, 'templates'),
+)
