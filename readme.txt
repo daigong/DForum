@@ -10,6 +10,7 @@ ln -s /usr/lib/x86_64-linux-gnu/libpng.so  libpng.so
 ln -s /usr/lib/x86_64-linux-gnu/libz.so   libz.so 
 
 
+apt-get install python-dev
 
 -1 sudo apt-get install libmysqlclient-dev 
 
