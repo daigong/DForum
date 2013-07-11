@@ -22,7 +22,7 @@ apt-get install python-dev
 
 3 python manage.py createsuperuser
 
-4 python manage.py runserver
+4 python manage.py runserver 0.0.0.0:8000
 
 
 
