@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import os
 # Django settings for bbs project.
 
@@ -196,9 +198,9 @@ LOGOUT_URL = "/accounts/logout/"
 REGISTER_URL = '%saccounts/register/' % ROOT_URL
 
 CTX_CONFIG = {
-        'LBFORUM_TITLE': 'LBForum',
-        'LBFORUM_SUB_TITLE': 'A forum engine written in Python using Django',
-        'FORUM_PAGE_SIZE': 50,
+        'LBFORUM_TITLE': '坛子',
+        'LBFORUM_SUB_TITLE': '优良免费',
+        'FORUM_PAGE_SIZE': 20,
         'TOPIC_PAGE_SIZE': 20,
 
         'LOGIN_URL': LOGIN_URL,
