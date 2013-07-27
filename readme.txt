@@ -10,6 +10,7 @@ ln -s /usr/lib/x86_64-linux-gnu/libpng.so  libpng.so
 ln -s /usr/lib/x86_64-linux-gnu/libz.so   libz.so 
 
 
+apt-get install python-dev
 
 -1 sudo apt-get install libmysqlclient-dev 
 
@@ -21,7 +22,7 @@ ln -s /usr/lib/x86_64-linux-gnu/libz.so   libz.so
 
 3 python manage.py createsuperuser
 
-4 python manage.py runserver
+4 python manage.py runserver 0.0.0.0:8000
 
 
 
