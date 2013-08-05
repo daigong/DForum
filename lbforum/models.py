@@ -126,9 +126,8 @@ class Topic(models.Model):
     has_attachments = models.BooleanField(default=False)
     need_replay = models.BooleanField(default=False)  # need_reply :-)
     need_reply_attachments = models.BooleanField(default=False)
-    has_qvod = models.BooleanField(default=False)
 
-    qvod_address = models.CharField(max_length=1000, blank=True, null=True, default='')
+    has_qvod = models.BooleanField(default=False)
 
     #Moderation features
     closed = models.BooleanField(default=False)
@@ -194,6 +193,8 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(blank=True, null=True)
     edited_by = models.CharField(max_length=255, blank=True)  # user name
+
+    qvod_address = models.CharField(max_length=1000, blank=True, null=True, default='')
 
     class Meta:
         verbose_name = _("Post")
