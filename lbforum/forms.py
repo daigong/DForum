@@ -92,12 +92,17 @@ class NewPostForm(PostForm):
                 topic_type = TopicType.objects.get(id=topic_type)
             else:
                 topic_type = None
+
+            self.qvod_address = self.cleaned_data['qvod_address']
+
             topic = Topic(forum=self.forum,
                           posted_by=self.user,
                           subject=self.cleaned_data['subject'],
                           need_replay=self.cleaned_data['need_replay'],
                           need_reply_attachments=self.cleaned_data['need_reply_attachments'],
                           topic_type=topic_type,
+                          qvod_address=self.qvod_address,
+                          has_qvod = has_qvod
                           )
             topic_post = True
             topic.save()

@@ -126,6 +126,9 @@ class Topic(models.Model):
     has_attachments = models.BooleanField(default=False)
     need_replay = models.BooleanField(default=False)  # need_reply :-)
     need_reply_attachments = models.BooleanField(default=False)
+    has_qvod = models.BooleanField(default=False)
+
+    qvod_address = models.CharField(max_length=1000, blank=True, null=True, default='')
 
     #Moderation features
     closed = models.BooleanField(default=False)
